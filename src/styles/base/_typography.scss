@@ -12,11 +12,13 @@ body {
     font-size: 6.7rem;
     font-weight: 300;
     letter-spacing: 2rem;
+    text-shadow: 0.5rem 1rem 2rem rgba(black, 0.4);
     &--sub {
       display: block;
       font-size: 3.7rem;
       letter-spacing: 1.5rem;
       color: $secondary-color;
+      text-shadow: 0.5rem 1rem 2rem rgba(black, 0.4);
     }
   }
 }
