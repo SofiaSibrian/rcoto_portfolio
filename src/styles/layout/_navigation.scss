@@ -1,0 +1,48 @@
+.navigation {
+  height: 8vh;
+  width: 100%;
+  position: fixed;
+  border-bottom: 2px solid $tertiary-color;
+
+  &__content {
+    width: 60%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    // background-color: yellowgreen;
+  }
+
+  &__list {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+  }
+
+  &__item {
+    display: inline-block;
+    height: 100%;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    &:link,
+    &:visited {
+      font-family: inherit;
+      font-size: 1.7rem;
+      letter-spacing: 0.1rem;
+      font-weight: 500;
+      text-decoration: none;
+      color: $light-font-color;
+      text-transform: uppercase;
+      transition: color 0.2s ease-in-out;
+    }
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
