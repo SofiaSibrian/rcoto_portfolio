@@ -1,7 +1,8 @@
 @import "./base/settings";
+@import "./abstracts/mixins";
 @import "./base/base";
 @import "./base/typography";
-@import "./abstracts/mixins";
 @import "./components/button";
 @import "./layout/navigation";
 @import "./layout/header";
+@import "./layout/qualifications";
