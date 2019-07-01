@@ -2,4 +2,12 @@
   width: 100vw;
   height: 100vh;
   background-color: $primary-color;
+  color: $light-font-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__text-box {
+    text-align: center;
+  }
 }

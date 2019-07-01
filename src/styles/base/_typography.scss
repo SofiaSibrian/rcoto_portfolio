@@ -1,3 +1,23 @@
 body {
   font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: $dark-font-color;
+}
+
+.heading {
+  &__primary {
+    display: block;
+    text-align: center;
+    margin: 0;
+    font-size: 6.7rem;
+    font-weight: 300;
+    letter-spacing: 2rem;
+    &--sub {
+      display: block;
+      font-size: 3.7rem;
+      letter-spacing: 1.5rem;
+      color: $secondary-color;
+    }
+  }
 }
