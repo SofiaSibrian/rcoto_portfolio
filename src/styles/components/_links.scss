@@ -1,0 +1,19 @@
+.link {
+  color: $tertiary-color;
+  font-family: inherit;
+  font-weight: 400;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: $tertiary-color;
+  }
+
+  &:visited {
+    color: darken($tertiary-color, 10%);
+    color: $tertiary-color;
+  }
+}
