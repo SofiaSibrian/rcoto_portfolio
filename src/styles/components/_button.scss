@@ -45,6 +45,7 @@
     &:hover {
       background-color: $secondary-color;
       color: $light-font-color;
+      @include standard-box-shadow;
     }
   }
 
@@ -56,6 +57,7 @@
     &:hover {
       background-color: $tertiary-color;
       color: $light-font-color;
+      @include standard-box-shadow;
     }
   }
 }
