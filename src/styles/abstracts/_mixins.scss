@@ -2,6 +2,14 @@
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2);
 }
 
+// Accessible hide
+
+@mixin hide() {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
 // Media Queries
 @mixin respond($breakpoint) {
   @if $breakpoint == xs {
