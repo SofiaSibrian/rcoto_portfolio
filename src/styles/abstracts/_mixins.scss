@@ -1,4 +1,40 @@
 @mixin standard-box-shadow() {
-  // box-shadow: -5px 5px 20px -2px rgba(0, 0, 0, 0.1);
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+// Media Queries
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    // 420px
+    @media only screen and (max-width: 26.25em) {
+      @content;
+    }
+  }
+  @if $breakpoint == phone {
+    // 600px
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port {
+    // 960px
+    @media only screen and (max-width: 60em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-land {
+    // 1280px
+    @media only screen and (max-width: 80em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == big-desktop {
+    // 1800px
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    }
+  }
 }
