@@ -24,9 +24,13 @@
   &__image {
     display: block;
     margin: 3rem auto;
-    max-width: 80rem;
+    width: 60%;
     border-left: 1px solid black;
     border-right: 1px solid black;
+  }
+
+  &__description {
+    text-align: center;
   }
 
   &__action {
