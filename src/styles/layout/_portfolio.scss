@@ -1,5 +1,5 @@
 .portfolio {
-  padding: 10rem 15rem;
+  @include section_padding;
   background-color: $background-secondary;
 
   &__box {

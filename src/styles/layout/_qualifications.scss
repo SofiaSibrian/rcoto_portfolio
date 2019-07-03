@@ -1,5 +1,5 @@
 .qualifications {
-  padding: 10rem 15rem;
+  @include section_padding;
 
   &__main-box {
   }

@@ -1,5 +1,5 @@
 .accomplishments {
-  padding: 10rem 15rem;
+  @include section_padding;
   color: rgba($light-font-color, 0.8);
   background-color: $primary-color;
 

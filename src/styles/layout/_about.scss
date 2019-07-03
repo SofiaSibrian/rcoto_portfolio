@@ -1,5 +1,5 @@
 .about {
-  padding: 10rem 15rem;
+  @include section_padding;
 
   &__main-text {
     display: block;
