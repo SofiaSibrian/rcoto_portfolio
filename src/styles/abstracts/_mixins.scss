@@ -4,6 +4,10 @@
 
 @mixin section_padding {
   padding: 10rem 15rem;
+
+  @include respond(md) {
+    padding: 5rem 0;
+  }
 }
 
 // Accessible hide
