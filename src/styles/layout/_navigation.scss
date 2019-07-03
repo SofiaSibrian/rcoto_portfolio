@@ -28,7 +28,8 @@
     align-items: center;
     @include respond(md) {
       border-bottom: 3px solid $secondary-color;
-      padding-left: 2rem;
+      padding: 0 3rem;
+      justify-content: space-between;
     }
   }
 
@@ -73,6 +74,22 @@
     &:hover {
       color: $secondary-color;
     }
+  }
+
+  &__button {
+    display: none;
+    border: none;
+    background-color: transparent;
+    @include respond(md) {
+      display: block;
+    }
+  }
+  &__burger {
+    display: block;
+    background-color: white;
+    width: 3.5rem;
+    height: 3px;
+    margin: 0.8rem;
   }
 }
 
