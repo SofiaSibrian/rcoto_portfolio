@@ -42,10 +42,6 @@
     display: flex;
     justify-content: space-between;
     margin: 0;
-
-    @include respond(md) {
-      @include hide;
-    }
   }
 
   &__item {
@@ -112,7 +108,7 @@
 
 // Accessible alternative to display: none;
 .hide {
-  @include respond(tab-land) {
+  @include respond(md) {
     position: absolute !important;
     top: -9999px !important;
     left: -9999px !important;
