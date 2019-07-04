@@ -5,7 +5,7 @@
   border-bottom: 3px solid $tertiary-color;
   background-color: $primary-color;
 
-  @include respond(md) {
+  @include respond(lg) {
     height: auto;
   }
 
@@ -16,7 +16,7 @@
     display: flex;
     justify-content: space-between;
 
-    @include respond(md) {
+    @include respond(lg) {
       flex-direction: column;
       width: 100%;
     }
@@ -26,7 +26,7 @@
     height: 8vh;
     display: flex;
     align-items: center;
-    @include respond(md) {
+    @include respond(lg) {
       border-bottom: 3px solid $secondary-color;
       padding: 0 3rem;
       justify-content: space-between;
@@ -76,7 +76,7 @@
     display: none;
     border: none;
     background-color: transparent;
-    @include respond(md) {
+    @include respond(lg) {
       display: block;
     }
   }
@@ -115,9 +115,10 @@
 
 // Accessible alternative to display: none;
 .hide {
-  @include respond(md) {
+  @include respond(lg) {
     position: absolute !important;
     top: -9999px !important;
     left: -9999px !important;
   }
+  transition: all 5s ease-in;
 }

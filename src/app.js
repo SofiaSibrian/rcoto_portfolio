@@ -15,15 +15,29 @@ const active_item = "navigation__active-item";
 const active_link = "navigation__active-link";
 const hide = "hide";
 
+// Toggles classes need for navigation to expand
+const toggleNav = () => {
+  // Works only if screen width is less or equal to 1280
+  if (window.innerWidth <= 1280) {
+    // Single element
+    list.classList.toggle(active_list);
+    list.classList.toggle(hide);
+    // multiple elements
+    items.forEach(item => item.classList.toggle(active_item));
+    links.forEach(link => link.classList.toggle(active_link));
+  }
+};
+
 // Will add the class hide to navigation__nav
 
 nav_btn.addEventListener("click", () => {
-  // Single element
-  list.classList.toggle(active_list);
-  list.classList.toggle(hide);
-  // multiple elements
-  items.forEach(item => item.classList.toggle(active_item));
-  links.forEach(link => link.classList.toggle(active_link));
+  toggleNav();
+});
+
+links.forEach(link => {
+  link.addEventListener("click", () => {
+    toggleNav();
+  });
 });
 
 // =====================================================
@@ -41,10 +55,11 @@ const navHome = document.querySelector("#nav-home");
 const navQuad = document.querySelector("#nav-qualifications");
 const navPort = document.querySelector("#nav-portfolio");
 const navAcc = document.querySelector("#nav-accomplishments");
-const navContact = document.querySelector("#nav-about");
+const navAbout = document.querySelector("#nav-about");
+const navContact = document.querySelector("#nav-contact");
 
-const navHightlight = (element, link) => {
-  const navOpt = {};
+const navHightlight = (element, link, threshold = null) => {
+  const navOpt = { threshold: threshold };
   const navObserver = new IntersectionObserver((entries, sectionObserver) => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) {
@@ -60,8 +75,9 @@ const navHightlight = (element, link) => {
   navObserver.observe(element);
 };
 
-navHightlight(header, navHome);
-navHightlight(qualifications, navQuad);
-navHightlight(portfolio, navPort);
-navHightlight(accomplishments, navAcc);
-navHightlight(about, navContact);
+navHightlight(header, navHome, 0.5);
+navHightlight(qualifications, navQuad, 0.3);
+navHightlight(portfolio, navPort, 0.2);
+navHightlight(accomplishments, navAcc, 0.3);
+navHightlight(about, navAbout, 0.3);
+navHightlight(footer, navContact);
