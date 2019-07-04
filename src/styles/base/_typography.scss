@@ -9,16 +9,31 @@ body {
   &__primary {
     display: block;
     margin: 0;
-    font-size: 6.7rem;
-    font-weight: 300;
+    font-size: 7.5rem;
+    font-weight: 400;
     letter-spacing: 2rem;
     text-shadow: 0.5rem 1rem 2rem rgba(black, 0.4);
+
+    @include respond(sm) {
+      font-size: 6.7rem;
+      letter-spacing: 1.5rem;
+    }
+
+    @include respond(xs) {
+      font-size: 4.5rem;
+      letter-spacing: 1.1rem;
+    }
     &--sub {
       display: block;
-      font-size: 3.7rem;
-      letter-spacing: 1.5rem;
+      font-size: 2.8rem;
+      letter-spacing: 1.4rem;
       color: $secondary-color;
       text-shadow: 0.5rem 1rem 2rem rgba(black, 0.4);
+
+      @include respond(xs) {
+        font-size: 1.8rem;
+        letter-spacing: 0.8rem;
+      }
     }
   }
 }
@@ -32,6 +47,10 @@ body {
     &--light {
       color: $light-font-color;
     }
+
+    @include respond(sm) {
+      font-size: 4.1rem;
+    }
   }
   &__description {
     font-size: 2.5rem;
@@ -39,6 +58,9 @@ body {
     margin: 0;
     &--light {
       color: $light-font-color;
+    }
+    @include respond(sm) {
+      font-size: 2rem;
     }
   }
 }
