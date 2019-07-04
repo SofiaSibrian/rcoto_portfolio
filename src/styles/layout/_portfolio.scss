@@ -4,18 +4,35 @@
 
   &__box {
     margin: 10rem 0;
+
+    @include respond(sm) {
+      margin: 5rem 0;
+    }
   }
 
   &__content {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50rem;
     margin-top: 10rem;
+
+    @include respond(sm) {
+      flex-flow: wrap;
+      margin-top: 5rem;
+    }
   }
 
   &__mockup {
     flex-basis: 50%;
+
+    @include respond(sm) {
+      flex-basis: 80%;
+      margin: 2.5rem;
+    }
+
+    @include respond(xs) {
+      flex-basis: 90%;
+    }
   }
 
   &__image {
@@ -24,6 +41,10 @@
 
   &__specs {
     height: 100%;
+
+    @include respond(xs) {
+      width: 90%;
+    }
   }
 
   &__title {
@@ -50,10 +71,13 @@
 
   &__actions {
     display: flex;
-    justify-content: flex-start;
+    width: 50rem;
+    justify-content: space-between;
 
-    & a {
-      margin-right: 3rem;
+    @include respond(xs) {
+      width: 100%;
+      font-size: 1.2rem;
+      justify-content: space-evenly;
     }
   }
 }
