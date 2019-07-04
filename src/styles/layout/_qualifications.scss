@@ -17,6 +17,10 @@
     margin-bottom: 5rem;
     overflow: hidden;
     @include standard-box-shadow;
+
+    @include respond(sm) {
+      flex-basis: 80%;
+    }
   }
 
   &__header {
