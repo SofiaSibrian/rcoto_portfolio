@@ -106,6 +106,13 @@
   }
 }
 
+.selected {
+  &:link,
+  &:visited {
+    color: $secondary-color;
+  }
+}
+
 // Accessible alternative to display: none;
 .hide {
   @include respond(md) {
