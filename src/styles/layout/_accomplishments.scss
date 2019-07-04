@@ -11,6 +11,9 @@
   }
 
   &__certification {
+    @include respond(md) {
+      width: 90%;
+    }
   }
 
   &__certification &__cert-name {
@@ -27,6 +30,13 @@
     width: 60%;
     border-left: 1px solid black;
     border-right: 1px solid black;
+
+    @include respond(md) {
+      width: 80%;
+    }
+    @include respond(md) {
+      width: 100%;
+    }
   }
 
   &__description {
