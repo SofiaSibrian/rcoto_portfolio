@@ -103,3 +103,19 @@ const slideProject = new IntersectionObserver((entries, slideProject) => {
 // Porfolio observers
 mockups.forEach(mockup => slideProject.observe(mockup));
 specs.forEach(spec => slideProject.observe(spec));
+
+// Buttons
+const portfolioBtn = document.querySelector("#actionBtn");
+const backTop = document.querySelector(".footer__action");
+
+const smoothScroll = (btn, target) => {
+  btn.addEventListener("click", () => {
+    target.scrollIntoView({
+      behavior: "smooth"
+    });
+  });
+};
+
+// Scroll Events
+smoothScroll(portfolioBtn, portfolio);
+smoothScroll(backTop, header);

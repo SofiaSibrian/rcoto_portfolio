@@ -18,6 +18,21 @@
       content="Author: Rodrigo Coto,
     freelance web developer profecional portfolio"
     />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-142765087-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-142765087-1");
+    </script> -->
+
     <title>Rodrigo Coto</title>
   </head>
   <body>
@@ -83,13 +98,9 @@
           Rodrigo Coto
           <span class="heading__primary--sub">Freelance Web Developer</span>
         </h1>
-        <a
-          role="button"
-          href="#portfolio"
-          class="header__action btn btn__primary"
-        >
+        <button id="actionBtn" class="header__action btn btn__primary">
           Portfolio
-        </a>
+        </button>
       </div>
     </header>
 
@@ -583,9 +594,9 @@
     <!-- Footer -->
     <!-- ================================================= -->
     <footer class="footer" id="footer">
-      <a href="#header" class="btn btn__secondary footer__action">
+      <button class="btn btn__secondary footer__action">
         <i class="fas fa-angle-double-up"></i>
-      </a>
+      </button>
       <div class="footer__links">
         <ul class="footer__list">
           <li class="footer__media">
