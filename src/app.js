@@ -113,9 +113,21 @@ const smoothScroll = (btn, target) => {
     target.scrollIntoView({
       behavior: "smooth"
     });
+    // Removes Focus from btn
+    btn.blur();
+    // Add Focus to section
+    target.focus();
   });
 };
 
-// Scroll Events
+// Main Header Action Scroll
 smoothScroll(portfolioBtn, portfolio);
+// NavBar Action Scroll
+smoothScroll(navHome, header);
+smoothScroll(navQuad, qualifications);
+smoothScroll(navPort, portfolio);
+smoothScroll(navAcc, accomplishments);
+smoothScroll(navAbout, about);
+smoothScroll(navContact, footer);
+// Footer Back To The Top Scroll
 smoothScroll(backTop, header);
