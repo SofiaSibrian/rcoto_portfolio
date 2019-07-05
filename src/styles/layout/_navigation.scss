@@ -108,10 +108,7 @@
 }
 
 .selected {
-  &:link,
-  &:visited {
-    color: $secondary-color;
-  }
+  color: $secondary-color;
 }
 
 // Accessible alternative to display: none;

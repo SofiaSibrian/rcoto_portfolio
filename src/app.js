@@ -60,13 +60,15 @@ const navContact = document.querySelector("#nav-contact");
 
 const navHightlight = (element, link, threshold = null) => {
   const navOpt = { threshold: threshold };
-  const navObserver = new IntersectionObserver((entries, sectionObserver) => {
+  const navObserver = new IntersectionObserver((entries, navObserver) => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) {
         // Out of section
+        console.log("Leaving");
         link.classList.remove("selected");
       } else {
         // In section
+        console.log("Entering");
         link.classList.add("selected");
       }
     });
@@ -74,14 +76,6 @@ const navHightlight = (element, link, threshold = null) => {
 
   navObserver.observe(element);
 };
-
-// Navbar status Observers
-navHightlight(header, navHome, 0.5);
-navHightlight(qualifications, navQuad, 0.3);
-navHightlight(portfolio, navPort, 0.2);
-navHightlight(accomplishments, navAcc, 0.3);
-navHightlight(about, navAbout, 0.3);
-navHightlight(footer, navContact);
 
 // Portfolio Observer
 const mockups = document.querySelectorAll(".portfolio__mockup");
@@ -131,3 +125,11 @@ smoothScroll(navAbout, about);
 smoothScroll(navContact, footer);
 // Footer Back To The Top Scroll
 smoothScroll(backTop, header);
+
+// Navbar status Observers
+navHightlight(header, navHome, 0.5);
+navHightlight(qualifications, navQuad, 0.3);
+navHightlight(portfolio, navPort, 0.2);
+navHightlight(accomplishments, navAcc, 0.3);
+navHightlight(about, navAbout, 0.3);
+navHightlight(footer, navContact);
