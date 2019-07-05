@@ -87,7 +87,7 @@ navHightlight(footer, navContact);
 const mockups = document.querySelectorAll(".portfolio__mockup");
 const specs = document.querySelectorAll(".portfolio__specs");
 
-const slideOptions = { rootMargin: "0% 0% 10% 0%", threshold: 0.7 };
+const slideOptions = { rootMargin: "0% 0% 35% 0%", threshold: 0.5 };
 
 const slideProject = new IntersectionObserver((entries, slideProject) => {
   entries.forEach(entry => {

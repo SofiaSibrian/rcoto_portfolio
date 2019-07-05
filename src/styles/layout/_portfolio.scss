@@ -1,6 +1,7 @@
 .portfolio {
   @include section_padding;
   background-color: $background-secondary;
+  overflow: hidden;
 
   &__box {
     margin: 10rem 0;
