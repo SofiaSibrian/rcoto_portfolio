@@ -7,6 +7,14 @@
   justify-content: center;
   align-items: center;
 
+  // background-image: linear-gradient(
+  //     to right bottom,
+  //     rgba($primary-color, 0.8),
+  //     rgba($primary-color, 0.8)
+  //   ),
+  //   url(../images/hero-image-2.jpg);
+  background-size: cover;
+  background-position: top;
   &__box {
     text-align: center;
   }

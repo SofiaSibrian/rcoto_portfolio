@@ -75,9 +75,31 @@ const navHightlight = (element, link, threshold = null) => {
   navObserver.observe(element);
 };
 
+// Navbar status Observers
 navHightlight(header, navHome, 0.5);
 navHightlight(qualifications, navQuad, 0.3);
 navHightlight(portfolio, navPort, 0.2);
 navHightlight(accomplishments, navAcc, 0.3);
 navHightlight(about, navAbout, 0.3);
 navHightlight(footer, navContact);
+
+// Portfolio Observer
+const mockups = document.querySelectorAll(".portfolio__mockup");
+const specs = document.querySelectorAll(".portfolio__specs");
+
+const slideOptions = { rootMargin: "0% 0% 10% 0%", threshold: 0.7 };
+
+const slideProject = new IntersectionObserver((entries, slideProject) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) {
+      return;
+    } else {
+      entry.target.classList.add("show");
+      slideProject.unobserve(entry.target);
+    }
+  });
+}, slideOptions);
+
+// Porfolio observers
+mockups.forEach(mockup => slideProject.observe(mockup));
+specs.forEach(spec => slideProject.observe(spec));
