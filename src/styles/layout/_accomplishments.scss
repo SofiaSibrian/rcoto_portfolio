@@ -48,4 +48,10 @@
     justify-content: center;
     margin-top: 3rem;
   }
+
+  &__link {
+    @include respond(nano) {
+      font-size: 1.4rem;
+    }
+  }
 }

@@ -27,6 +27,11 @@ body {
       font-size: 4.5rem;
       letter-spacing: 1.1rem;
     }
+
+    @include respond(nano) {
+      font-size: 3.7rem;
+      letter-spacing: 1rem;
+    }
     &--sub {
       display: block;
       font-size: 2.8rem;
@@ -37,6 +42,10 @@ body {
       @include respond(xs) {
         font-size: 1.8rem;
         letter-spacing: 0.8rem;
+      }
+      @include respond(nano) {
+        font-size: 1.5rem;
+        letter-spacing: 0.7rem;
       }
     }
   }
