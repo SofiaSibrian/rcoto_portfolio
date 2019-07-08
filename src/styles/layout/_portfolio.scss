@@ -43,6 +43,11 @@
     width: 100%;
   }
 
+  &__dyno-note {
+    font-weight: 300;
+    color: #666;
+  }
+
   &__specs {
     height: 100%;
     transform: translateX(50%);
