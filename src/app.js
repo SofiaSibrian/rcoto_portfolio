@@ -1,5 +1,6 @@
 import "./styles/styles.scss";
 import classModifier from "./js/classModifier";
+import "intersection-observer";
 
 // =====================================================
 // NABVAR===============================================

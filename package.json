@@ -42,6 +42,7 @@
   },
   "dependencies": {
     "clean-webpack-plugin": "^2.0.1",
+    "intersection-observer": "^0.7.0",
     "sanitize.css": "^9.0.0"
   }
 }
