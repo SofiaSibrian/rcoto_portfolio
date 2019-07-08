@@ -1,4 +1,5 @@
 import "./styles/styles.scss";
+import classModifier from "./js/classModifier";
 
 // =====================================================
 // NABVAR===============================================
@@ -43,6 +44,8 @@ links.forEach(link => {
 // =====================================================
 // Observers============================================
 // =====================================================
+let region = "header";
+
 const nav = document.querySelector("#navigation");
 const header = document.querySelector("#header");
 const qualifications = document.querySelector("#qualifications");
@@ -64,12 +67,12 @@ const navHightlight = (element, link, threshold = null) => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) {
         // Out of section
-        console.log("Leaving");
-        link.classList.remove("selected");
+        // link.classList.remove("selected");
       } else {
+        classModifier(link.id, links);
         // In section
-        console.log("Entering");
-        link.classList.add("selected");
+        // console.log("Enter", element.id, entry.isIntersecting);
+        // link.classList.add("selected");
       }
     });
   }, navOpt);
@@ -129,7 +132,7 @@ smoothScroll(backTop, header);
 // Navbar status Observers
 navHightlight(header, navHome, 0.5);
 navHightlight(qualifications, navQuad, 0.3);
-navHightlight(portfolio, navPort, 0.2);
+navHightlight(portfolio, navPort, 0.1);
 navHightlight(accomplishments, navAcc, 0.3);
-navHightlight(about, navAbout, 0.3);
+navHightlight(about, navAbout, 0.1);
 navHightlight(footer, navContact);
