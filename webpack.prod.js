@@ -6,6 +6,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const postcssPresetEnv = require("postcss-preset-env");
 
 module.exports = merge(common, {
   mode: "production",
@@ -37,8 +38,14 @@ module.exports = merge(common, {
         test: /\.(scss|css)$/,
         use: [
           MiniCssExtractPlugin.loader, // 4. Extracs css into files
-          "css-loader", // 3. Turn css into commonjs
-          "postcss-loader", // 2. Add vendor prefixes to css
+          { loader: "css-loader", options: { importLoaders: 1 } }, // 3. Turn css into commonjs
+          {
+            loader: "postcss-loader",
+            options: {
+              ident: "postcss",
+              plugins: () => [postcssPresetEnv({ browsers: "last 2 versions" })]
+            }
+          }, // 2. Add vendor prefixes to css
           "sass-loader" // 1. Turn sass into css
         ]
       }
