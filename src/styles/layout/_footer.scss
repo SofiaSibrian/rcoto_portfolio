@@ -62,12 +62,11 @@
     text-align: center;
   }
 
-  &__name {
+  &__copyright {
     color: $secondary-color;
-  }
 
-  &__year {
-    margin-left: 1rem;
-    color: $tertiary-color;
+    &--secondary {
+      color: $tertiary-color;
+    }
   }
 }
