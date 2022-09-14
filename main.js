@@ -1,6 +1,7 @@
-import "./styles/styles.scss";
-import classModifier from "./js/classModifier";
-import "intersection-observer";
+import "./src/styles/styles.scss";
+import classModifier from "./src/js/classModifier";
+import "./node_modules/@fortawesome/fontawesome-free/css/all.css";
+import "sanitize.css";
 
 // =====================================================
 // NABVAR===============================================
