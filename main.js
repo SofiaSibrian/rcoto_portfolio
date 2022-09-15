@@ -1,22 +1,22 @@
-import "./src/styles/styles.scss";
-import classModifier from "./src/js/classModifier";
-import "./node_modules/@fortawesome/fontawesome-free/css/all.css";
-import "sanitize.css";
+import './src/styles/styles.scss';
+import classModifier from './src/js/classModifier';
+import './node_modules/@fortawesome/fontawesome-free/css/all.css';
+import 'sanitize.css';
 
 // =====================================================
 // NABVAR===============================================
 // =====================================================
 
 // Grab list, item, link
-const list = document.querySelector(".navigation__list");
-const items = document.querySelectorAll(".navigation__item");
-const links = document.querySelectorAll(".navigation__link");
-const nav_btn = document.querySelector(".navigation__button");
+const list = document.querySelector('.navigation__list');
+const items = document.querySelectorAll('.navigation__item');
+const links = document.querySelectorAll('.navigation__link');
+const nav_btn = document.querySelector('.navigation__button');
 
-const active_list = "navigation__active-list";
-const active_item = "navigation__active-item";
-const active_link = "navigation__active-link";
-const hide = "hide";
+const active_list = 'navigation__active-list';
+const active_item = 'navigation__active-item';
+const active_link = 'navigation__active-link';
+const hide = 'hide';
 
 // Toggles classes need for navigation to expand
 const toggleNav = () => {
@@ -26,19 +26,19 @@ const toggleNav = () => {
     list.classList.toggle(active_list);
     list.classList.toggle(hide);
     // multiple elements
-    items.forEach(item => item.classList.toggle(active_item));
-    links.forEach(link => link.classList.toggle(active_link));
+    items.forEach((item) => item.classList.toggle(active_item));
+    links.forEach((link) => link.classList.toggle(active_link));
   }
 };
 
 // Will add the class hide to navigation__nav
 
-nav_btn.addEventListener("click", () => {
+nav_btn.addEventListener('click', () => {
   toggleNav();
 });
 
-links.forEach(link => {
-  link.addEventListener("click", () => {
+links.forEach((link) => {
+  link.addEventListener('click', () => {
     toggleNav();
   });
 });
@@ -46,27 +46,27 @@ links.forEach(link => {
 // =====================================================
 // Observers============================================
 // =====================================================
-let region = "header";
+let region = 'header';
 
-const nav = document.querySelector("#navigation");
-const header = document.querySelector("#header");
-const qualifications = document.querySelector("#qualifications");
-const portfolio = document.querySelector("#portfolio");
-const accomplishments = document.querySelector("#accomplishments");
-const about = document.querySelector("#about");
-const footer = document.querySelector("#footer");
+const nav = document.querySelector('#navigation');
+const header = document.querySelector('#header');
+const qualifications = document.querySelector('#qualifications');
+const portfolio = document.querySelector('#portfolio');
+const accomplishments = document.querySelector('#accomplishments');
+const about = document.querySelector('#about');
+const footer = document.querySelector('#footer');
 
-const navHome = document.querySelector("#nav-home");
-const navQuad = document.querySelector("#nav-qualifications");
-const navPort = document.querySelector("#nav-portfolio");
-const navAcc = document.querySelector("#nav-accomplishments");
-const navAbout = document.querySelector("#nav-about");
-const navContact = document.querySelector("#nav-contact");
+const navHome = document.querySelector('#nav-home');
+const navQuad = document.querySelector('#nav-qualifications');
+const navPort = document.querySelector('#nav-portfolio');
+const navAcc = document.querySelector('#nav-accomplishments');
+const navAbout = document.querySelector('#nav-about');
+const navContact = document.querySelector('#nav-contact');
 
 const navHightlight = (element, link, threshold = null) => {
   const navOpt = { threshold: threshold };
   const navObserver = new IntersectionObserver((entries, navObserver) => {
-    entries.forEach(entry => {
+    entries.forEach((entry) => {
       if (!entry.isIntersecting) {
         // Out of section
         // link.classList.remove("selected");
@@ -83,34 +83,34 @@ const navHightlight = (element, link, threshold = null) => {
 };
 
 // Portfolio Observer
-const mockups = document.querySelectorAll(".portfolio__mockup");
-const specs = document.querySelectorAll(".portfolio__specs");
+const mockups = document.querySelectorAll('.portfolio__mockup');
+const specs = document.querySelectorAll('.portfolio__specs');
 
-const slideOptions = { rootMargin: "0% 0% 35% 0%", threshold: 0.5 };
+const slideOptions = { rootMargin: '0% 0% 35% 0%', threshold: 0.5 };
 
 const slideProject = new IntersectionObserver((entries, slideProject) => {
-  entries.forEach(entry => {
+  entries.forEach((entry) => {
     if (!entry.isIntersecting) {
       return;
     } else {
-      entry.target.classList.add("show");
+      entry.target.classList.add('show');
       slideProject.unobserve(entry.target);
     }
   });
 }, slideOptions);
 
 // Porfolio observers
-mockups.forEach(mockup => slideProject.observe(mockup));
-specs.forEach(spec => slideProject.observe(spec));
+mockups.forEach((mockup) => slideProject.observe(mockup));
+specs.forEach((spec) => slideProject.observe(spec));
 
 // Buttons
-const portfolioBtn = document.querySelector("#actionBtn");
-const backTop = document.querySelector(".footer__action");
+const portfolioBtn = document.querySelector('#actionBtn');
+const backTop = document.querySelector('.footer__action');
 
 const smoothScroll = (btn, target) => {
-  btn.addEventListener("click", () => {
+  btn.addEventListener('click', () => {
     target.scrollIntoView({
-      behavior: "smooth"
+      behavior: 'smooth',
     });
     // Removes Focus from btn
     btn.blur();
